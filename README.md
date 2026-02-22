@@ -1,10 +1,9 @@
 # Notes com Laravel
 
-Este é um projeto de um simples aplicativo de anotações (Notes) desenvolvido com o framework Laravel. Ele permite que os usuários se registrem, façam login e gerenciem suas anotações pessoais.
+Este é um projeto de um simples aplicativo de anotações (Notes) desenvolvido com o framework Laravel. Ele permite que os usuários façam login e gerenciem suas anotações pessoais.
 
 ## Funcionalidades
 
--   Registro de novos usuários.
 -   Autenticação de usuários (Login/Logout).
 -   Criação, visualização, edição e exclusão de anotações.
 -   Design responsivo utilizando Bootstrap.
