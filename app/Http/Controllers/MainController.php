@@ -61,6 +61,10 @@ class MainController extends Controller
     {
         $idDecrypt = Operations::decryptId($id);
 
+        if (!$idDecrypt) {
+            return redirect('/');
+        }
+
         $note = Note::where('id', $idDecrypt)
             ->where('deleted_at', NULL)
             ->first();
@@ -79,6 +83,10 @@ class MainController extends Controller
         }
 
         $idNote = Operations::decryptId($request->input('id'));
+
+        if (!$idNote) {
+            return redirect('/');
+        }
 
         $request->validate([
             'text_title' => 'required|min:3|max:200',
@@ -117,6 +125,10 @@ class MainController extends Controller
     public function deleteNote($id)
     {
         $idNote = Operations::decryptId($id);
+
+        if (!$idNote) {
+            return redirect('/');
+        }
 
         $note = Note::find($idNote);
 
